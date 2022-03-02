@@ -37,9 +37,21 @@ class ViewController: UIViewController {
 //        controlButton.setTitle("NEXT", for: .normal)
        
         
+        if redLightView.alpha != 1,yellowLightView.alpha != 1 {
+            redLightView.alpha = 1
+            yellowLightView.alpha = 0.3
+            greenLightView.alpha = 0.3
+        } else if yellowLightView.alpha != 1, redLightView.alpha == 1 {
+            yellowLightView.alpha = 1
+            redLightView.alpha = 0.3
+            greenLightView.alpha = 0.3
+        } else if greenLightView.alpha != 1{
+            greenLightView.alpha = 1
+            yellowLightView.alpha = 0.3
+            redLightView.alpha = 0.3
+        }
         controlButton.setTitle("NEXT", for: .normal)
-        
-        
+
     }
     
     
